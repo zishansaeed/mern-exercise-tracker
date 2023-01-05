@@ -42,7 +42,7 @@ app.use((error, req, res, next) => {
 mongoose.set("strictQuery", false);
 mongoose
   .connect(
-    "mongodb+srv://zeeshan:test1234@cluster0.27ssrtn.mongodb.net/exercise_tracker?retryWrites=true&w=majority"
+    "mongodb+srv://<YourUserName>:<YourPassword>@cluster0.27ssrtn.mongodb.net/exercise_tracker?retryWrites=true&w=majority"
   )
   .then(() => {
     app.listen(port, () => {
