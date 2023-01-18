@@ -102,16 +102,14 @@ const Auth = () => {
       <Card className="authentication">
         {isLoading && <LoadingSpinner asOverlay />}
         <h1 className="auth-header">Welcome</h1>
-        <p className="auth-header">Create your account</p>
 
-        <hr />
         <form onSubmit={authSubmitHandler}>
           {!isLoginMode && (
             <Input
               element="input"
               id="name"
               type="text"
-              label="Your Name"
+              label="Name"
               validators={[VALIDATOR_REQUIRE()]}
               errorText="Please enter a name."
               onInput={inputHandler}
@@ -121,7 +119,7 @@ const Auth = () => {
             element="input"
             id="email"
             type="email"
-            label="E-Mail"
+            label="Email"
             validators={[VALIDATOR_EMAIL()]}
             errorText="Please enter a valid email address."
             onInput={inputHandler}
